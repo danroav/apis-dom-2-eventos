@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+	function Alertar() {
+			alert("se ha precionado una tecla");
+	}
+	</script>
+	
+	<script>
+	function whichElement(e) {
+			var targ;
+			if (!e) {
+					var e = window.event;
+			}
+			if (e.target) {
+					targ=e.target;
+			} else if (e.srcElement) {
+					targ=e.srcElement;
+			}
+			var tname;
+			tname = targ.tagName;
+			alert("hiciste click en el elemento" + tname);
+	}
+	</script>
+	
+	
+	
+	
+	
+	<script>
+	function Prueba01_Chile(elemento, color_01){
+	elemento.style.color = color_01
+	}
+	</script>
+	
+	
+	
+	</head>
+	
+	----------------AQUI INICIA EL BODY--------
+	<body onmousedown="whichElement(event)">
+	
+	<div>
+	//Chile
+	<p> Esta Funcion sucede al momento de hacer un On Click en el texto
+	Cambiando el color y otra al momento de Mientras haces el On Click y mueves el Mouse,cambia a otro color </p>
+	<p onmousedown="Prueba01_Chile(this,'red')"
+	onmouseup="Prueba01_Chile(this,'green')">
+	Hola soy Chile, me gusta el Pan y la Pizza. 
+	</p>
+	
+	<div> 
+	//Brenda
+	
+	<p>Una funcion se activa cuando el usuario presiona una tecla en el campo de entrada.</p>
+	
+	<input type="text" onkeydown="Alertar()">
+	
+	</div>
+	<div>
+	
+	
+	
+	</div>
+	<p>Haga clic en algún lugar del documento. Un cuadro de alerta alertará el nombre del elemento en el que hizo clic.</p>
+	<h3>Esta es la cabeza </h3>
+	<img border="0" src="smiley.gif" alt="Smiley" width="32" height="32">
+	<p>Esto es un parrafo.</p> 
+	</body>
+</html>
+<!-- 
+
+
+	
+<head>
+	<title>Parcel Sandbox</title>
+	<meta charset="UTF-8" />
+
+	<script>
+		function myFunction() {
+				var x = document.getElementById("fname");
+				x.value = x.value.toUpperCase();
+		}
+	</script>
+
+</head>
+
+<body>
+	<div id="app"></div>
+	<script src="src/index.js">
+
+	</script>
+
+<p>Esta funcion sube a mayusculas</p>
+Introducir Nombre: <input type="text" id="fname" onkeyup="myFunction()">
+</body>
+
+</html> 
+-->
